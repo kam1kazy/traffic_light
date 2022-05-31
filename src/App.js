@@ -8,12 +8,12 @@ export default function App() {
   const [yellowColor, setYellowColor] = useState();
   const [greenColor, setGreenColor] = useState();
 
-  // Time for Red light and Green light
+  // Set time for Red light and Green light
   const redTime = 15;
   const greenTime = 10;
   const flashAnimation = 4;
 
-  // Set time for change color
+  // Count time for change color
   const time = redTime + greenTime;
   const redChangeColor = time - (redTime - flashAnimation);
   const greenChangeColor = time - redTime;
