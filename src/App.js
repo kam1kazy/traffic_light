@@ -11,11 +11,11 @@ export default function App() {
   // Time for Red light and Green light
   const redTime = 15;
   const greenTime = 10;
-  const yellowTime = 5;
+  const flashAnimation = 4;
 
   // Set time for change color
   const time = redTime + greenTime;
-  const redChangeColor = time - (redTime - yellowTime);
+  const redChangeColor = time - (redTime - flashAnimation);
   const greenChangeColor = time - redTime;
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function App() {
     await new Promise((resolve) =>
       setTimeout(
         () => resolve(setYellowColor(""), setRedColor("")),
-        yellowTime * 1000
+        flashAnimation * 1000
       )
     );
   };
@@ -54,7 +54,7 @@ export default function App() {
     await new Promise((resolve) =>
       setTimeout(
         () => resolve(setGreenColor("green animated")),
-        yellowTime * 1000
+        flashAnimation * 1000
       )
     );
   };
